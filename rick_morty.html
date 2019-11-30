@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rick & Morty</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <style>
+        .carousel img {
+            width: 300px;
+            height: 300px;
+            margin: auto;
+        }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-dark text-light sticky-top">
+      <a class="navbar-brand" href="#">
+        <img src="resources/rickicon.png" width="30" height="30" alt="" />
+        <span class="display-6 m-1">Home</span>
+      </a>
+    </nav>
+    <div class="container-fluid bg-gradient-light p-5 text-dark">
+      <h1 class="text-center">Get information about Rick and Morty show</h1>
+      <div class="col-6 col-sm-4 col-md-3 m-auto text-center">
+        <select
+          id="choiceSelect"
+          class="custom-select border-success text-dark"
+        >
+          <option value="character" selected>Search By Character</option>
+          <option value="episode">Search By Episode</option>
+        </select>
+        <button class="btn btn-outline-success my-2" id="submitBtn">
+          Submit
+        </button>
+      </div>
+      <div class="col-*-8 m-auto" id="formDiv">
+        <form class="col-8 m-auto col-sm-6 col-md-4 py-4">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              placeholder="Enter Name of the Character"
+            />
+          </div>
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select id="status" class="form-control">
+              <option value="">Select Status</option>
+              <option value="alive">Alive</option>
+              <option value="dead">Dead</option>
+              <option value="unknown">Unknown</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="species">Species</label>
+            <input
+              type="text"
+              id="species"
+              class="form-control"
+              placeholder="Enter Species"
+            />
+          </div>
+          <div class="form-group">
+            <label for="gender">Gender</label>
+            <select id="gender" class="form-control">
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="genderless">Genderless</option>
+              <option value="unknown">Unknown</option>
+            </select>
+          </div>
+          <small class="text-muted">If all the fields are empty then all the data will be shown.</small>
+          <button class="btn btn-outline-success text-center w-100" id="chBtn">
+            Show Results
+          </button>
+        </form>
+        <form class="col-8 m-auto col-sm-6 col-md-4 py-4">
+          <div class="form-group">
+            <label for="episodeId">Episode ID</label>
+            <input
+              type="text"
+              id="episodeId"
+              class="form-control"
+              placeholder="Enter Episode ID"
+            />
+            <small class="text-danger" id="epWarning">Episode ID should lie between 1 and 31</small>
+          </div>
+          <small class="text-muted">If all the fields are empty then all the data will be shown.</small>
+          <button class="btn btn-outline-success text-center w-100" id="epBtn">
+            Show Results
+          </button>
+        </form>
+      </div>
+      <div class="col-*-8 m-auto text-center" id="resultDiv">
+        <div
+          id="carouselControls"
+          class="carousel slide carousel-fade"
+          data-ride="carousel"
+        ></div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="rick_morty.js"></script>
+  </body>
+</html>
